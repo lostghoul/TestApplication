@@ -1,4 +1,4 @@
-package com.example.testapplication.job;
+package com.example.testapplication.jobscheduler;
 
 import android.app.Activity;
 import android.app.job.JobInfo;

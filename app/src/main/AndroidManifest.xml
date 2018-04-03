@@ -23,10 +23,10 @@
         </activity>
         <!--start JobScheduler-->
         <service
-            android:name="com.example.testapplication.job.SimpleJobService"
+            android:name="com.example.testapplication.jobscheduler.SimpleJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
-            android:name="com.example.testapplication.job.MultiJobService"
+            android:name="com.example.testapplication.jobscheduler.MultiJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <!--end JobScheduler-->
     </application>
