@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sunshaogang.testapplication">
+    package="com.example.testapplication">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /><!--for JobScheduler-->
 
     <application
         android:allowBackup="true"
@@ -19,6 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--start JobScheduler-->
+        <service
+            android:name="com.example.testapplication.job.SimpleJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.example.testapplication.job.MultiJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!--end JobScheduler-->
     </application>
 
 </manifest>

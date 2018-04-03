@@ -1,4 +1,4 @@
-package com.example.sunshaogang.testapplication;
+package com.example.testapplication;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.testapplication.job.JobSchedulerUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,14 +30,16 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                JobSchedulerUtils.scheduleMultiJob(MainActivity.this);
             }
         });
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+//        TextView tv = (TextView) findViewById(R.id.sample_text);
+//        tv.setText(stringFromJNI());
+
     }
 
     @Override
